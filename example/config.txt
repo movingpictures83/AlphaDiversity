@@ -1,0 +1,2 @@
+Prefix plugins/AlphaDiversity/example
+Plugin AlphaDiversity inputfile parameters.txt outputfile alpha.txt

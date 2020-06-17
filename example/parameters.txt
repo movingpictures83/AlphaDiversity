@@ -1,0 +1,6 @@
+biomfile	plugins/AlphaDiversity/example/filtered_otu_table.biom
+tree	plugins/AlphaDiversity/example/rep_set.tre
+observed_species
+chao1
+shannon
+PD_whole_tree
