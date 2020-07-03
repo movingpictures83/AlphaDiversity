@@ -1,7 +1,7 @@
 # Language: C++
 # Input: TXT
 # Output: TXT
-# Tested with: PluMA 1.0, GCC 4.8.4
+# Tested with: PluMA 1.1, GCC 4.8.4
 # Dependency: Qiime 1.9.1, Python 2.7
 
 PluMA plugin to compute alpha-diversity of a set of samples using Qiime (Caporaso et al, 2010).
