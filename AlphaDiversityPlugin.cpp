@@ -28,7 +28,8 @@ void AlphaDiversityPlugin::run() {
 
 void AlphaDiversityPlugin::output(std::string file) {
  // alpha_diversity.py -i filtered_otu_table.biom -m observed_species,chao1,shannon,PD_whole_tree -t rep_set.tre -o alpha.txt
-   std::string command = "export OLDPATH=${PYTHONPATH}; export PYTHONPATH=${PYTHON2_DIST_PACKAGES}:${PYTHON2_SITE_PACKAGES}:${PYTHONPATH}; alpha_diversity.py ";
+   //std::string command = "export OLDPATH=${PYTHONPATH}; export PYTHONPATH=${PYTHON2_DIST_PACKAGES}:${PYTHON2_SITE_PACKAGES}:${PYTHONPATH}; alpha_diversity.py ";
+   std::string command = "alpha_diversity.py ";
  command += "-i "+parameters["biomfile"]+" -m ";
  for (int i = 0; i < metrics.size(); i++) {
     command += metrics[i];
@@ -38,7 +39,7 @@ void AlphaDiversityPlugin::output(std::string file) {
  if (treeflag) {
  command += "-t "+parameters["tree"]+" ";
  }
- command += "-o "+file+"; export PYTHONPATH=OLDPATH";
+ command += "-o "+file;//+"; export PYTHONPATH=OLDPATH";
  std::cout << command << std::endl;
 
  system(command.c_str());
